@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    scroll-behavior: smooth;
+    /* border: 0.1px solid red; */
+    overflow-anchor: none;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+ /* Firefox  */
+
+/* input[type="number"] {
+-moz-appearance: textfield;
+} */
+
+.redColor{
+    color:red;
+}
+.greenColor{
+    color:green;
+}

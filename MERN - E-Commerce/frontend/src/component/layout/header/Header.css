@@ -1,0 +1,58 @@
+.speedDial {
+  position: fixed;
+  left: 3vmax;
+  top: 6vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.speedDial {
+  cursor: pointer;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: fixed; /* Change to fixed to make it sticky */
+  top: 125px; /* Adjust this value to position the options under the profile picture */
+  left: 10px; /* Adjust this value to position the options under the profile picture */
+  background-color: #ffffff; /* Background color for options container */
+  border: 1px solid #dddddd; /* Border color for options container */
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.speedDialOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333333; /* Text color for options */
+}
+
+.speedDialOption svg {
+  margin-right: 8px;
+}
+
+.speedDialOption span {
+  font-size: 16px; /* Increase font size for options text */
+}
+
+/* Additional styles to match your desired appearance */
+.speedDialIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Styling for the tooltip */
+.speedDialOption:hover {
+  background-color: #f1f1f1;
+}

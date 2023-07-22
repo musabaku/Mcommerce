@@ -1,0 +1,86 @@
+.image > img{
+    width: 200px;
+    height: 130px;
+    margin: auto;
+  }
+  .image{
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+  
+  }
+  .text-image{
+    display: flex;
+    flex-direction: column;
+    background-color: #410954;
+
+    align-items: center;
+    
+  }
+  .container-info{
+    background-color: #410954;
+    
+  height: 72vh;
+  color: #E6C619;
+  }
+  .text-image >h2 {
+  font: 400 1.5vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 2vmax;
+  }
+  
+  .p-tc{
+  font: 300 1.2vmax 'Lucida Sans';
+  text-align: center;
+    width: 50%;
+  margin-bottom: 2vmax;
+  }
+  
+  .ptc{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-ptc{
+    padding: 15px 24px;
+    background-color:#fbda61;
+    color: #410954;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Common styles */
+/* ... (previous CSS) */
+
+/* Styles for screen width up to 600px */
+@media screen and (max-width: 600px) {
+  .text-image {
+    flex-direction: column;
+    padding: 2vmax;
+  }
+
+  .image {
+    margin-top: 0;
+    margin-bottom: 2vmax;
+  }
+
+  .image > img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 130px;
+  }
+
+  .ptc {
+    text-align: center;
+  }
+
+  .btn-ptc {
+    margin-top: 1vmax;
+  }
+}

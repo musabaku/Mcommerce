@@ -1,0 +1,222 @@
+/* Global styles */
+.productsHeading {
+    margin: 2vmax auto;
+    color: #410954ab;
+    border-bottom: 2px solid black;
+    text-align: center;
+    width: 40vmax;
+    padding: 2vmax;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+.productsHeading .h2{
+  width: 40vmax;
+  
+  display: block;
+
+}
+.price-dropdown{
+  text-align: center;
+  margin-top: 1vmax;
+}
+.flexing{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vmax;
+    justify-content: center;
+    min-height: 30vh;
+  }
+  .all-Products {
+    margin-top: 20px;
+    margin-right: 40px;
+    padding: 5px 13px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .all-Products:hover {
+    background-color: #0056b3;
+  }
+  .pagination {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .paginationBox {
+    display: flex;
+    justify-content: center;
+    margin: 6vmax;
+  }
+  
+  .page-item {
+    border: 1px solid rgba(0, 0, 0, 0.269);
+    text-decoration: none;
+    list-style: none;
+    padding: 1vmax 1.5vmax;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .page-link {
+    text-decoration: none;
+    transition: all 0.3s;
+    font: 300 0.7vmax "Roboto";
+    color: rgb(80, 80, 80);
+  }
+  
+  .page-item:first-child {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .page-item:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .page-item:hover {
+    color: rgb(80, 80, 80);
+  }
+  
+  .pageItemActive {
+    background-color: tomato;
+  }
+  
+  .filterBox {
+    position: absolute;
+    width: 9vmax;
+    top: 18vmax;
+    right: 0.1vmax;
+    bottom: 20vmax;
+    padding-bottom: 30vmax;
+  }
+  
+  .categoryBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .category-link {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    color: #333;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color:#410954;
+    color: #fbda61;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-link.active {
+    color: #410954;
+
+    background-color:#fbda61;
+
+  }
+  
+  /* Additional styles for fieldset and rating */
+  fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 9vmax;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .rating label {
+    color: #888;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label i {
+    color: lightgray;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .rating input[type="radio"]:checked ~ label i {
+    color: orange;
+  }
+
+  .productsHeading {
+    margin: 2vmax auto;
+    color: black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    width: 20vmax;
+    padding: 2vmax;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vmax;
+    justify-content: center;
+    min-height: 30vh;
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 600px) {
+    .filterBox {
+      width: 90%;
+    }
+  
+    .category-link {
+      font-size: 14px;
+      margin: 3px;
+      padding: 5px 10px;
+    }
+  
+    fieldset {
+      padding: 10px;
+    }
+  
+    .rating label {
+      font-size: 14px;
+    }
+  
+    .rating label i {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+  
+    .all-Products {
+      margin-top: 20px;
+      padding: 5px 15px;
+      font-size: 11px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+
+  }

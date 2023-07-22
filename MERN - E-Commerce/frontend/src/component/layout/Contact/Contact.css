@@ -1,0 +1,154 @@
+.contactSection {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  position: fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contactSectionGradient {
+  background-image: linear-gradient(to bottom right, #410954, #fbda61);
+}
+
+.contactSectionContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #410954;
+  color: #fbda61;
+  width: 80vw;
+  height: 80vh;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactSectionContainer > h1 {
+  font: 400 3vmax "Roboto";
+  color: #fbda61;
+
+  margin: 2vmax;
+}
+
+.contactSectionContainer > div {
+  display: flex;
+  width: 100%;
+}
+
+.contactSectionContainer > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.contactSectionContainer21 > span {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fbda61;
+
+}
+
+.contactSectionContainer > div > div > p {
+  color: rgba(0, 0, 0, 0.623);
+  font: 100 1vmax "Roboto";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contactSectionContainer > div > div > button {
+  margin: 1vmax 0;
+}
+
+.contactSectionContainer > div > div > span {
+  font: 100 1.2vmax "Roboto";
+  color: #fbda61;
+
+  width: 80%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contactSectionContainer2 {
+  border-left: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.text {
+  font: 300 2.5vmax "Roboto";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contactSectionContainer2 > h2 {
+  color: rgba(0, 0, 0, 0.623);
+  font: 300 2.5vmax "Roboto";
+}
+
+.contactSectionContainer2 > a > svg {
+  font-size: 4vmax;
+}
+
+.youtubeSvgIcon {
+  color: tomato;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 8px; /* Increase the padding to make the icon bigger */
+  border-radius: 50%;
+  font-size: 24px; /* Increase the font-size to make the icon bigger */
+}
+
+.instagramSvgIcon {
+  color: rgb(144, 81, 202);
+  background-color: rgba(144, 81, 202, 0.2);
+  padding: 8px; /* Increase the padding to make the icon bigger */
+  border-radius: 50%;
+  font-size: 24px; /* Increase the font-size to make the icon bigger */
+}
+
+.contactContainer2 {
+  margin: 4vmax;
+}
+
+.contactContainer2 > h2 {
+  margin-bottom: 2vmax;
+}
+
+.contact-detail > ul > li {
+  margin: 2vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .contactSectionContainer > div {
+    display: block;
+  }
+
+  .contactSectionContainer > h1 {
+    font: 400 5vmax "Roboto";
+    margin: 3vmax;
+  }
+
+  .contactSectionContainer > div > div > p {
+    font: 100 2vmax "Roboto";
+  }
+
+  .contactSectionContainer > div > div > span {
+    font: 100 1.4vmax "Roboto";
+    width: 70%;
+  }
+
+  .contactSectionContainer2 {
+    border-left: none;
+  }
+
+  .contactSectionContainer2 > h2 {
+    font: 100 3vmax "Roboto";
+    margin: 2vmax;
+  }
+
+  .contactSectionContainer2 > a > svg {
+    font-size: 6vmax;
+    margin: 1vmax;
+  }
+}
