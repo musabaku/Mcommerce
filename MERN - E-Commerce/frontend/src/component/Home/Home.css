@@ -332,7 +332,11 @@ transform: translateY(-1vmax);
         clip-path: none;
     } */
     .header-text1 h1 {
-      font-size: 2.9vmax;
+      font-size: 3vmax;
+  }
+  .header-text1 p {
+    font-size: 2vmax;
+
   }
   .explore-button {
     background-color: #fbda61;
@@ -350,6 +354,27 @@ transform: translateY(-1vmax);
   flex-direction: column;
   height: 50vh !important;
   justify-content: center;
+}
+.main-box{
+  background-color: #410954;
+  background-image: linear-gradient(35deg, #410954 0%, #410954 70%, #fbda61 100%);
+    margin-top: -2px;
+  
+  display: flex;
+  width: 100%;
+  height: 83vh;
+  justify-content: space-between;
+}
+.top-header{
+  background-color: #410954;
+  background-image: linear-gradient(165deg, #410954 0%, #410954 60%, #fbda61 100%);  
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17vh;
+  margin-bottom: 2px;
+
 }
 }
 

@@ -1,8 +1,5 @@
 const sendToken = (user, statusCode, res) => {
-  console.log("hi")
   const token = user.getJWTToken();
-  console.log("hi")
-console.log(token)
   const options = {
     expires: new Date(
       Date.now() + Number(process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000)

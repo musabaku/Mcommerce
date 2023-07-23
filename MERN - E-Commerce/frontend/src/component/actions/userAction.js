@@ -21,7 +21,8 @@ import {
   // FORGOT_PASSWORD_REQUEST,
   // FORGOT_PASSWORD_FAIL,
 } from "../constant/userConstant";
-// import axiosInstance from "../axiosInstance";
+import axiosInstance from "../axiosInstance";
+import axios from "axios";
 
 export const login = (email, password) => async (dispatch) => {
   try {
@@ -29,16 +30,16 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_REQUEST,
     });
     const config = { headers: { "Content-type": "application/json" } };
-    const { data } = await axiosInstance.post(
-      "/login",
-      { email, password },
-      config
-    );
-    // const { data } = await axios.post(
-    //   `/api/v1/login`,
+    // const { data } = await axiosInstance.post(
+    //   "/login",
     //   { email, password },
     //   config
     // );
+    const { data } = await axios.post(
+      `/api/v1/login`,
+      { email, password },
+      config
+    );
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -49,10 +50,20 @@ export const login = (email, password) => async (dispatch) => {
       type: CLEAR_ERRORS,
     });
   } catch (error) {
-    dispatch({
-      type: LOGIN_FAIL,
-      payload: error.response.data.message,
-    });
+    if (axios.isAxiosError(error) && error.response) {
+        console.log(error.response);
+        dispatch({
+          type: LOGIN_FAIL,
+          payload: error.response.data.message,
+        });
+    } else {
+        // Handle error when server is unreachable
+        console.log(error);
+        dispatch({
+          type: LOGIN_FAIL,
+          payload: "Server is unreachable",
+        });
+    }
   }
 };
 
@@ -78,10 +89,20 @@ export const register = (userData) => async (dispatch) => {
       type: CLEAR_ERRORS,
     });
   } catch (error) {
-    dispatch({
-      type: REGISTER_USER_FAIL,
-      payload: error.response.data.message,
-    });
+    if (axios.isAxiosError(error) && error.response) {
+        console.log(error.response);
+        dispatch({
+          type: REGISTER_USER_FAIL,
+          payload: error.response.data.message,
+        });
+    } else {
+        // Handle error when server is unreachable
+        console.log(error);
+        dispatch({
+          type: REGISTER_USER_FAIL,
+          payload: "Server is unreachable",
+        });
+    }
   }
 };
 

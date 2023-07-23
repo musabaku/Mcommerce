@@ -83,4 +83,16 @@
   .btn-ptc {
     margin-top: 1vmax;
   }
+  .container-info{
+    background-color: #410954;
+    
+  height: 60vh;
+  color: #E6C619;
+  }
+  .p-tc{
+    font: 300 1.8vmax 'Lucida Sans';
+    text-align: center;
+      width: 70%;
+    margin-bottom: 2vmax;
+    }
 }
