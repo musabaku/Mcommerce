@@ -14,18 +14,12 @@ const user = require("./routes/userRoute")
 app.use("/api/v1",product)
 app.use("/api/v1",user)
 
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-// });
-const buildPath = path.join(__dirname, "frontend", "build");
-
-app.use(express.static(buildPath));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"));
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 });
+
 app.use(errorMiddleware)
 
 
