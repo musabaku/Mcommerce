@@ -87,9 +87,10 @@ const Home = () => {
             <div className="header-text1">
               <h1>Welcome to Our Mcommerce Store</h1>
               <p>Discover a World of Amazing Products</p>
-              <a href="/products" className="explore-button">
-                Explore Now
-              </a>
+              <Link to={"/products"} >
+              <button className="explore-button">Explore Now</button>
+                
+              </Link>
             </div>
 
             <div className="header-image1">

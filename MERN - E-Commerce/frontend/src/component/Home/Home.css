@@ -331,7 +331,26 @@ transform: translateY(-1vmax);
     /* .banner::after {
         clip-path: none;
     } */
-    
+    .header-text1 h1 {
+      font-size: 2.9vmax;
+  }
+  .explore-button {
+    background-color: #fbda61;
+    border-radius: 4px;
+    color: #410954;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 2vmax;
+    padding: 8px 8px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+.main-box {
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+}
 }
 
 @media screen and (max-width:1150px) {
