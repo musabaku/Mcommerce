@@ -348,7 +348,7 @@ transform: translateY(-1vmax);
 .main-box {
   align-items: center;
   flex-direction: column;
-  height: 50vh;
+  height: 50vh !important;
   justify-content: center;
 }
 }
