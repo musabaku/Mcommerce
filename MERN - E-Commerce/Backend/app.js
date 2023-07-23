@@ -1,7 +1,7 @@
 const express = require("express")
 const errorMiddleware = require("./middleware/error")
 const cookieParser = require("cookie-parser")
-const path = require("path");
+// const path = require("path");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "Backend/config/config.env" });
 }
@@ -14,11 +14,11 @@ const user = require("./routes/userRoute")
 app.use("/api/v1",product)
 app.use("/api/v1",user)
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+// });
 
 app.use(errorMiddleware)
 
