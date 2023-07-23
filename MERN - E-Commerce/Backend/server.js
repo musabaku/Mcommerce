@@ -11,8 +11,9 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 //   next();
 // });
 const corsOptions ={
-  origin: ['https://macommerce-ndrj.onrender.com', 'https://illustrious-crepe-c524d2.netlify.app'],
-    credentials:true,           
+  origin:'*',
+    credentials:true,   
+    optionSuccessStatus:200,        
 }
 app.use(cors(corsOptions));
 connectDatabase();
