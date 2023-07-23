@@ -1,22 +1,20 @@
 const app = require("./app");
 // const dotenv = require("dotenv");
 const connectDatabase = require("./database");
-// const cors = require("cors"); 
-// const corsOptions = require('./config/corsOptions')
+const cors = require("cors"); 
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "Backend/config/config.env" });
 }
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://master--golden-bavarois-befcbf.netlify.app');
-  next();
-});
-// const corsOptions ={
-//     origin:'http://localhost:3000', 
-//     credentials:true,           
-//     optionSuccessStatus:200
-// }
-// app.use(cors(corsOptions));
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', 'https://master--golden-bavarois-befcbf.netlify.app');
+//   next();
+// });
+const corsOptions ={
+  origin: ['https://macommerce-ndrj.onrender.com', 'https://illustrious-crepe-c524d2.netlify.app'],
+    credentials:true,           
+}
+app.use(cors(corsOptions));
 connectDatabase();
 
 
