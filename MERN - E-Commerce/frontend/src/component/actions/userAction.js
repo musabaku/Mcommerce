@@ -21,16 +21,16 @@ import {
   // FORGOT_PASSWORD_REQUEST,
   // FORGOT_PASSWORD_FAIL,
 } from "../constant/userConstant";
+import axiosInstance from "../axiosInstance";
 
-import axios from "axios";
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({
       type: LOGIN_REQUEST,
     });
     const config = { headers: { "Content-type": "application/json" } };
-    const { data } = await axios.post(
-      "/api/v1/login",
+    const { data } = await axiosInstance.post(
+      "/login",
       { email, password },
       config
     );
@@ -62,7 +62,7 @@ export const register = (userData) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_REQUEST });
     const config = { headers: { "Content-type": "application/json" } };
 
-    const { data } = await axios.post("/api/v1/register", userData, config);
+    const { data } = await axiosInstance.post("/register", userData, config);
 
     dispatch({
       type: REGISTER_USER_SUCCESS,
@@ -80,12 +80,12 @@ export const register = (userData) => async (dispatch) => {
   }
 };
 
-export const userLoad = (email, password) => async (dispatch) => {
+export const userLoad = () => async (dispatch) => {
   try {
     dispatch({
       type: LOAD_USER_REQUEST,
     });
-    const { data } = await axios.get("/api/v1/me");
+    const { data } = await axiosInstance.get("/me");
 
     dispatch({
       type: LOAD_USER_SUCCESS,
@@ -105,7 +105,7 @@ export const userLoad = (email, password) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
-    await axios.get("/api/v1/logout");
+    await axiosInstance.get("/logout");
     dispatch({
       type: LOGOUT_SUCCESS,
     });
@@ -123,9 +123,7 @@ export const profileUpdate = (userData) => async (dispatch) => {
     dispatch({
       type: UPDATE_PROFILE_REQUEST,
     });
-    console.log(userData);
-    const { data } = await axios.put(`/api/v1/me/update`, userData, config);
-    console.log(data);
+    const { data } = await axiosInstance.put("/me/update", userData, config);
     dispatch({
       type: UPDATE_PROFILE_SUCCESS,
       payload: data.success,
@@ -144,7 +142,7 @@ export const updatePassword = (userData) => async (dispatch) => {
     dispatch({
       type: UPDATE_PASSWORD_REQUEST,
     });
-    const { data } = await axios.put(`/api/v1/password/update`, userData, config);
+    const { data } = await axiosInstance.put("/password/update", userData, config);
     dispatch({
       type: UPDATE_PASSWORD_SUCCESS,
       payload: data.success,
@@ -157,5 +155,5 @@ export const updatePassword = (userData) => async (dispatch) => {
   }
 };
 
-
+// ...
 
