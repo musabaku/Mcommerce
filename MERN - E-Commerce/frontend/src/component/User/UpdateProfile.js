@@ -15,7 +15,7 @@ const UpdateProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { user } = useSelector((state) => state.user);
+  const { user , isAuthenticated} = useSelector((state) => state.user);
   const { isUpdated, loading, error } = useSelector((state) => state.profile);
 
   const updateProfileSubmit = (e) => {
@@ -28,6 +28,9 @@ const UpdateProfile = () => {
 
  
   useEffect(() => {
+    if(isAuthenticated){
+
+    
     if (user) {
       setName(user.name);
       setEmail(user.email);
@@ -43,7 +46,9 @@ const UpdateProfile = () => {
       navigate("/account")
       dispatch({ type: UPDATE_PROFILE_RESET });
     }
-  }, [dispatch, error,navigate, isUpdated,user]);
+  }
+  
+  }, [dispatch, error,navigate, isUpdated,isAuthenticated,user]);
 
   return (
     <Fragment>

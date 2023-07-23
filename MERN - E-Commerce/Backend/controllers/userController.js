@@ -233,8 +233,8 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler(`User with id ${req.params.id} does not exist`, 404)
     );
   }
-  await user.remove()
-  res.status(200).json({
+  await user.remove() 
+  res.status(200).json({ 
     success: true,
     message: "Profile Deleted Successfully",
   });

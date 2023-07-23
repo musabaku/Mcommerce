@@ -27,16 +27,19 @@ import ProductList from "./component/Admin/ProductList.js";
 import UpdateProduct from "./component/Admin/UpdateProduct";
 import NotFound from "./component/layout/NotFound/NotFound";
 function App() {
+  const {user, isAuthenticated} = useSelector((state)=>state.user)
+
   React.useEffect(() => {
     WebFont.load({
       google: { families: ["Roboto", "Droid Sans"] },
     });
+    if(isAuthenticated){
+      store.dispatch(userLoad())
 
-    store.dispatch(userLoad())
+    }
   }, []);
-  window.addEventListener("contextmenu", (e) => e.preventDefault());
+  // window.addEventListener("contextmenu", (e) => e.preventDefault());
 
-  const {user, isAuthenticated} = useSelector((state)=>state.user)
   return (
     <Router>
       <Header />

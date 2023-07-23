@@ -1,12 +1,18 @@
 const app = require("./app");
 // const dotenv = require("dotenv");
 const connectDatabase = require("./database");
-
+// const cors = require("cors"); 
+// const corsOptions = require('./config/corsOptions')
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "Backend/config/config.env" });
 }
-
+// const corsOptions ={
+//     origin:'http://localhost:3000', 
+//     credentials:true,           
+//     optionSuccessStatus:200
+// }
+// app.use(cors(corsOptions));
 connectDatabase();
 
 
