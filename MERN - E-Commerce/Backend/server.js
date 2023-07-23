@@ -7,6 +7,10 @@ const connectDatabase = require("./database");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "Backend/config/config.env" });
 }
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://master--golden-bavarois-befcbf.netlify.app');
+  next();
+});
 // const corsOptions ={
 //     origin:'http://localhost:3000', 
 //     credentials:true,           
