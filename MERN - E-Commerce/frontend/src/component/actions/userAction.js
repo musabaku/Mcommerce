@@ -30,16 +30,16 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_REQUEST,
     });
     const config = { headers: { "Content-type": "application/json" } };
-    // const { data } = await axiosInstance.post(
-    //   "/login",
-    //   { email, password },
-    //   config
-    // );
-    const { data } = await axios.post(
-      `/api/v1/login`,
+    const { data } = await axiosInstance.post(
+      "/login",
       { email, password },
       config
     );
+    // const { data } = await axios.post(
+    //   `/api/v1/login`,
+    //   { email, password },
+    //   config
+    // );
 
     dispatch({
       type: LOGIN_SUCCESS,
