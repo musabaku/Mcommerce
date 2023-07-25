@@ -96,7 +96,7 @@ const Products = () => {
 
             <button className="all-Products" onClick={handleAllProducts}>
                 <Link
-                  to="/products"
+                  to={"/products"}
                   style={{ color: "white", textDecoration: "none" }}
                 >
                   All Products
